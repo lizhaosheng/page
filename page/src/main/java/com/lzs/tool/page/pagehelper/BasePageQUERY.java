@@ -95,9 +95,4 @@ public class BasePageQUERY implements Serializable{
 	public void setFrom(long from) {
 		this.from = from;
 	}
-
-	public boolean skipCount() {
-		return pageSize <= 0;
-	}
-
 }
