@@ -48,18 +48,22 @@ public  Result queryInfo(Param query,BasePageQUERY page){
 
 使用
 1、将该包下的所有方法拷贝到你的代码路径下（暂时没实现通过jar包引用方式），修改出现的错误
+
 2、修改MyPageInterceptor类
   @Pointcut("execution(* com.lzs.buessness.mapper..*.*(..))") // com.lzs.buessness.mapper包及其子包下的所有方法
 	public void aspect() {
 	}
   将Pointcut上需要拦截的包路径改为你的mapper所在的路径
+  
 3、将MyPageInterceptor添加到spring扫描路径下，并加入@Component注解或者在xml中定义相应的bean
   @Aspect
   @Component
   public class MyPageInterceptor {...}
   或
   <bean id="myPageInterceptor" class="xxx.xxx.xxx.MyPageInterceptor">
+  
 4、添加aspectJ支持 <aop:aspectj-autoproxy />  （注意不能是：<aop:aspectj-autoproxy proxy-target-class="true" />强制使用CGLIB代理 ,需要被代理对象有默认构造方法，也就是说不能代理接口。 使用默认：自动在JDK动态代理和CGLIB之间转换 ，jdk的默认代理必须要目标类实现接口）
+
 5、在mapper方法上添加注解
   @Resource
   public interface InfoMapper {
