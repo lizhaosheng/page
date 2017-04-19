@@ -1,0 +1,14 @@
+.*
+!.gitignore
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+build/
+target/
+bin/
+
+logs/
+*.log
