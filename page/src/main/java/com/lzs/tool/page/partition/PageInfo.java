@@ -1,4 +1,4 @@
-package com.lzs.tool.page.my;
+package com.lzs.tool.page.partition;
 
 /**
  * 所有分页对象必须实现该接口，设置{@link Page}注解的方法中必须有一个参数是{@link PageInfo}的实现类。<br>

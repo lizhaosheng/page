@@ -24,7 +24,7 @@ import com.github.pagehelper.PageInterceptor;
 
 /**
  * 封装PageInterceptor，简化操作。
- * 推荐使用另一种方式{@link com.lzs.tool.page.my.MyPageInterceptor}
+ * 推荐使用另一种方式{@link com.lzs.tool.page.partition.PageInterceptor}
  */
 @Intercepts({@Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}),
 	        @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class, CacheKey.class, BoundSql.class})})

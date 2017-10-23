@@ -1,4 +1,4 @@
-package com.lzs.tool.page.my;
+package com.lzs.tool.page.partition;
 
 public class PageInterceptException extends RuntimeException{
 
